@@ -1,3 +1,5 @@
+let theme;
+
 function home() {
     window.location.href = "https://jpwaters09.github.io";
 }
@@ -19,6 +21,100 @@ function aboutLink() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("Theme") == "0") {
+        document.getElementById("toggle").style.transform = "translateX(26px)";
+        document.getElementById("toggleSwitch").style.backgroundColor = "#393939";
+        document.getElementById("toggle").style.backgroundColor = "#494949";
+
+        document.body.style.backgroundColor = "#191919";
+        document.getElementById("topbar").style.backgroundColor = "#292929";
+        document.getElementById("footer").style.backgroundColor = "#292929";
+
+        setTimeout(() => {
+            document.body.classList.add("transition");
+            document.getElementById("topbar").classList.add("transition");
+            document.getElementById("toggle").classList.add("transition");
+            document.getElementById("toggleSwitch").classList.add("transition");
+            document.getElementById("footer").classList.add("transition");
+        }, 300);
+
+        theme = 0;
+    }
+
+    else if (localStorage.getItem("Theme") == "1") {
+        document.getElementById("toggle").style.transform = "translateX(0)";
+        document.getElementById("toggleSwitch").style.backgroundColor = "#d9d9d9";
+        document.getElementById("toggle").style.backgroundColor = "#c9c9c9";
+
+        document.body.style.backgroundColor = "#f9f9f9";
+        document.getElementById("topbar").style.backgroundColor = "#e9e9e9";
+        document.getElementById("footer").style.backgroundColor = "#e9e9e9";
+
+        setTimeout(() => {
+            document.body.classList.add("transition");
+            document.getElementById("topbar").classList.add("transition");
+            document.getElementById("toggle").classList.add("transition");
+            document.getElementById("toggleSwitch").classList.add("transition");
+            document.getElementById("footer").classList.add("transition");
+        }, 300);
+        
+        theme = 1;
+    }
+
+    else {
+        document.getElementById("toggle").style.transform = "translateX(0)";
+        document.getElementById("toggleSwitch").style.backgroundColor = "#d9d9d9";
+        document.getElementById("toggle").style.backgroundColor = "#c9c9c9";
+
+        document.body.style.backgroundColor = "#f9f9f9";
+        document.getElementById("topbar").style.backgroundColor = "#e9e9e9";
+        document.getElementById("footer").style.backgroundColor = "#e9e9e9";
+
+        setTimeout(() => {
+            document.body.classList.add("transition");
+            document.getElementById("topbar").classList.add("transition");
+            document.getElementById("toggle").classList.add("transition");
+            document.getElementById("toggleSwitch").classList.add("transition");
+            document.getElementById("footer").classList.add("transition");
+        }, 300);
+
+        theme = 1;
+    }
+
+    document.getElementById("toggle").addEventListener("mouseenter", () => {
+        if (theme == 0) {
+            document.getElementById("toggle").style.backgroundColor = "#595959";
+        }
+
+        else if (theme == 1) {
+            document.getElementById("toggle").style.backgroundColor = "#b9b9b9";
+        }
+    });
+
+    document.getElementById("toggle").addEventListener("mouseleave", () => {
+        if (theme == 0) {
+            document.getElementById("toggle").style.backgroundColor = "#494949";
+        }
+
+        else if (theme == 1) {
+            document.getElementById("toggle").style.backgroundColor = "#c9c9c9";
+        }
+    });
+
+    document.getElementById("homeBtn").addEventListener("mouseenter", () => {
+        if (theme == 0) {
+            document.getElementById("homeBtn").style.backgroundColor = "#393939";
+        }
+
+        else if (theme == 1) {
+            document.getElementById("homeBtn").style.backgroundColor = "#d9d9d9";
+        }
+    });
+
+    document.getElementById("homeBtn").addEventListener("mouseleave", () => {
+        document.getElementById("homeBtn").style.backgroundColor = "#00000000";
+    });
+
     document.getElementById("homeLink").addEventListener("mouseenter", () => {
         document.getElementById("homeUnderline").style.visibility = "visible";
         document.getElementById("homeUnderline").style.width = "100%";
@@ -172,4 +268,32 @@ function footerPatreon() {
 
 function footerPayPal() {
     window.open("https://paypal.me/jacobw120");
+}
+
+function toggle() {
+    if (theme == 0) {
+        document.getElementById("toggle").style.transform = "translateX(0)";
+        document.getElementById("toggleSwitch").style.backgroundColor = "#d9d9d9";
+        document.getElementById("toggle").style.backgroundColor = "#c9c9c9";
+
+        document.body.style.backgroundColor = "#f9f9f9";
+        document.getElementById("topbar").style.backgroundColor = "#e9e9e9";
+        document.getElementById("footer").style.backgroundColor = "#e9e9e9";
+        
+        theme = 1;
+        localStorage.setItem("Theme", "1");
+    }
+
+    else if (theme == 1) {
+        document.getElementById("toggle").style.transform = "translateX(26px)";
+        document.getElementById("toggleSwitch").style.backgroundColor = "#393939";
+        document.getElementById("toggle").style.backgroundColor = "#494949";
+
+        document.body.style.backgroundColor = "#191919";
+        document.getElementById("topbar").style.backgroundColor = "#292929";
+        document.getElementById("footer").style.backgroundColor = "#292929";
+
+        theme = 0;
+        localStorage.setItem("Theme", "0");
+    }
 }
