@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         else if (theme == 1) {
-            document.getElementById("homeBtn").style.backgroundColor = "#d9d9d9";
+            document.getElementById("homeBtn").style.backgroundColor = "#c9c9c9";
         }
     });
 
