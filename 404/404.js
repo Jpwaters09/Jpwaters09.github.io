@@ -43,12 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     else if (localStorage.getItem("Theme") == "1") {
         document.getElementById("toggle").style.transform = "translateX(0)";
-        document.getElementById("toggleSwitch").style.backgroundColor = "#d9d9d9";
-        document.getElementById("toggle").style.backgroundColor = "#c9c9c9";
+        document.getElementById("toggleSwitch").style.backgroundColor = "#c9c9c9";
+        document.getElementById("toggle").style.backgroundColor = "#b9b9b9";
 
-        document.body.style.backgroundColor = "#f9f9f9";
-        document.getElementById("topbar").style.backgroundColor = "#e9e9e9";
-        document.getElementById("footer").style.backgroundColor = "#e9e9e9";
+        document.body.style.backgroundColor = "#e9e9e9";
+        document.getElementById("topbar").style.backgroundColor = "#d9d9d9";
+        document.getElementById("footer").style.backgroundColor = "#d9d9d9";
 
         setTimeout(() => {
             document.body.classList.add("transition");
@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     else {
         document.getElementById("toggle").style.transform = "translateX(0)";
-        document.getElementById("toggleSwitch").style.backgroundColor = "#d9d9d9";
-        document.getElementById("toggle").style.backgroundColor = "#c9c9c9";
+        document.getElementById("toggleSwitch").style.backgroundColor = "#c9c9c9";
+        document.getElementById("toggle").style.backgroundColor = "#b9b9b9";
 
-        document.body.style.backgroundColor = "#f9f9f9";
-        document.getElementById("topbar").style.backgroundColor = "#e9e9e9";
-        document.getElementById("footer").style.backgroundColor = "#e9e9e9";
+        document.body.style.backgroundColor = "#e9e9e9";
+        document.getElementById("topbar").style.backgroundColor = "#d9d9d9";
+        document.getElementById("footer").style.backgroundColor = "#d9d9d9";
 
         setTimeout(() => {
             document.body.classList.add("transition");
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         else if (theme == 1) {
-            document.getElementById("toggle").style.backgroundColor = "#b9b9b9";
+            document.getElementById("toggle").style.backgroundColor = "#a9a9a9";
         }
     });
 
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         else if (theme == 1) {
-            document.getElementById("toggle").style.backgroundColor = "#c9c9c9";
+            document.getElementById("toggle").style.backgroundColor = "#b9b9b9";
         }
     });
 
@@ -273,12 +273,12 @@ function footerPayPal() {
 function toggle() {
     if (theme == 0) {
         document.getElementById("toggle").style.transform = "translateX(0)";
-        document.getElementById("toggleSwitch").style.backgroundColor = "#d9d9d9";
-        document.getElementById("toggle").style.backgroundColor = "#c9c9c9";
+        document.getElementById("toggleSwitch").style.backgroundColor = "#c9c9c9";
+        document.getElementById("toggle").style.backgroundColor = "#b9b9b9";
 
-        document.body.style.backgroundColor = "#f9f9f9";
-        document.getElementById("topbar").style.backgroundColor = "#e9e9e9";
-        document.getElementById("footer").style.backgroundColor = "#e9e9e9";
+        document.body.style.backgroundColor = "#e9e9e9";
+        document.getElementById("topbar").style.backgroundColor = "#d9d9d9";
+        document.getElementById("footer").style.backgroundColor = "#d9d9d9";
         
         theme = 1;
         localStorage.setItem("Theme", "1");
