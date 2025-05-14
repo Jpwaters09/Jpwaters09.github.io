@@ -1,3 +1,12 @@
+////////////////////////////////////////////////
+// Jpwaters09.github.io 404 Page              //
+// Language: JavaScript                       //
+// Author: Jacob Waters                       //
+// Github: github.com/jpwaters09              //
+// Copyright (c) 2025 Jacob Waters            //
+// Contact me: jpwaters09.business@gmail.com  //
+////////////////////////////////////////////////
+
 let theme;
 
 function home() {
