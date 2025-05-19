@@ -18,15 +18,15 @@ function homeLink() {
 }
 
 function projectsLink() {
-    window.location.href = "https://Jpwaters09.github.io/projects";
+    window.location.href = "https://Jpwaters09.github.io/Projects";
 }
 
 function contactLink() {
-    window.location.href = "https://Jpwaters09.github.io/contactme";
+    window.location.href = "https://Jpwaters09.github.io/Contact";
 }
 
 function aboutLink() {
-    window.location.href = "https://Jpwaters09.github.io/about";
+    window.location.href = "https://Jpwaters09.github.io/About";
 }
 
 document.addEventListener("DOMContentLoaded", function () {

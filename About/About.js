@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.backgroundColor = "#191919";
         document.getElementById("topbar").style.backgroundColor = "#292929";
         document.getElementById("footer").style.backgroundColor = "#292929";
+        document.getElementById("python").style.backgroundColor = "#292929";
 
         document.getElementById("homeBtn").style.color = "#ffffff";
         document.getElementById("homeLink").style.color = "#ffffff";
@@ -59,6 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("footerX").style.color = "#ffffff";
         document.getElementById("footerPatreon").style.color = "#ffffff";
         document.getElementById("footerPayPal").style.color = "#ffffff";
+        document.getElementById("title").style.color = "#ffffff";
+        document.getElementById("aboutMe").style.color = "#ffffff";
+        document.getElementById("pythonSpan").style.color = "#ffffff";
+        document.getElementById("skillsTitle").style.color = "#ffffff";
 
         document.getElementById("homeUnderline").style.border = "1px solid #dddddd";
         document.getElementById("projectsUnderline").style.border = "1px solid #dddddd";
@@ -105,6 +110,11 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("footerX").classList.add("transition");
             document.getElementById("footerPatreon").classList.add("transition");
             document.getElementById("footerPayPal").classList.add("transition");
+            document.getElementById("title").classList.add("transition");
+            document.getElementById("aboutMe").classList.add("transition");
+            document.getElementById("python").classList.add("transition");
+            document.getElementById("pythonSpan").classList.add("transition");
+            document.getElementById("skillsTitle").classList.add("transition");
         }, 300);
 
         theme = 0;
@@ -118,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.backgroundColor = "#e9e9e9";
         document.getElementById("topbar").style.backgroundColor = "#d9d9d9";
         document.getElementById("footer").style.backgroundColor = "#d9d9d9";
+        document.getElementById("python").style.backgroundColor = "#d9d9d9";
 
         document.getElementById("homeBtn").style.color = "#000000";
         document.getElementById("homeLink").style.color = "#000000";
@@ -139,6 +150,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("footerX").style.color = "#000000";
         document.getElementById("footerPatreon").style.color = "#000000";
         document.getElementById("footerPayPal").style.color = "#000000";
+        document.getElementById("title").style.color = "#000000";
+        document.getElementById("aboutMe").style.color = "#000000";
+        document.getElementById("pythonSpan").style.color = "#000000";
+        document.getElementById("skillsTitle").style.color = "#000000";
 
         document.getElementById("homeUnderline").style.border = "1px solid #222222";
         document.getElementById("projectsUnderline").style.border = "1px solid #222222";
@@ -185,6 +200,11 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("footerX").classList.add("transition");
             document.getElementById("footerPatreon").classList.add("transition");
             document.getElementById("footerPayPal").classList.add("transition");
+            document.getElementById("title").classList.add("transition");
+            document.getElementById("aboutMe").classList.add("transition");
+            document.getElementById("python").classList.add("transition");
+            document.getElementById("pythonSpan").classList.add("transition");
+            document.getElementById("skillsTitle").classList.add("transition");
         }, 300);
         
         theme = 1;
@@ -548,6 +568,7 @@ function toggle() {
         document.body.style.backgroundColor = "#e9e9e9";
         document.getElementById("topbar").style.backgroundColor = "#d9d9d9";
         document.getElementById("footer").style.backgroundColor = "#d9d9d9";
+        document.getElementById("python").style.backgroundColor = "#d9d9d9";
 
         document.getElementById("homeBtn").style.color = "#000000";
         document.getElementById("homeLink").style.color = "#000000";
@@ -569,6 +590,10 @@ function toggle() {
         document.getElementById("footerX").style.color = "#000000";
         document.getElementById("footerPatreon").style.color = "#000000";
         document.getElementById("footerPayPal").style.color = "#000000";
+        document.getElementById("title").style.color = "#000000";
+        document.getElementById("aboutMe").style.color = "#000000";
+        document.getElementById("pythonSpan").style.color = "#000000";
+        document.getElementById("skillsTitle").style.color = "#000000";
 
         document.getElementById("homeUnderline").style.border = "1px solid #222222";
         document.getElementById("projectsUnderline").style.border = "1px solid #222222";
@@ -600,6 +625,7 @@ function toggle() {
         document.body.style.backgroundColor = "#191919";
         document.getElementById("topbar").style.backgroundColor = "#292929";
         document.getElementById("footer").style.backgroundColor = "#292929";
+        document.getElementById("python").style.backgroundColor = "#292929";
 
         document.getElementById("homeBtn").style.color = "#ffffff";
         document.getElementById("homeLink").style.color = "#ffffff";
@@ -621,6 +647,10 @@ function toggle() {
         document.getElementById("footerX").style.color = "#ffffff";
         document.getElementById("footerPatreon").style.color = "#ffffff";
         document.getElementById("footerPayPal").style.color = "#ffffff";
+        document.getElementById("title").style.color = "#ffffff";
+        document.getElementById("aboutMe").style.color = "#ffffff";
+        document.getElementById("pythonSpan").style.color = "#ffffff";
+        document.getElementById("skillsTitle").style.color = "#ffffff";
 
         document.getElementById("homeUnderline").style.border = "1px solid #dddddd";
         document.getElementById("projectsUnderline").style.border = "1px solid #dddddd";

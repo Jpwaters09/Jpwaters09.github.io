@@ -144,6 +144,118 @@ body.transition {
     user-select: none;
 }
 
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    width: 100%;
+}
+
+#profileImg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+#mainTitle {
+    display: flex;
+    flex-direction: row;
+}
+
+#summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#python {
+    background-color: #292929;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px #00000050;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+}
+
+#python.transition {
+    transition: background-color 0.3s ease;
+}
+
+#pythonLogo {
+    width: 70px;
+    -webkit-user-drag: none;
+    user-select: none;
+    margin-bottom: 5px;
+}
+
+#pythonSpan {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    user-select: none;
+}
+
+#pythonSpan.transition {
+    transition: color 0.3s ease;
+}
+
+#title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: xx-large;
+    user-select: none;
+    margin-bottom: 10px;
+}
+
+#title.transition {
+    transition: color 0.3s ease;
+}
+
+#aboutMe {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    user-select: none;
+}
+
+#aboutMe.transition {
+    transition: color 0.3s ease;
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#languages {
+    display: flex;
+    flex-direction: row;
+}
+
+#skillsTitle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-weight: 500;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+#skillsTitle.transition {
+    transition: color 0.3s ease;
+}
+
 #footer {
     position: absolute;
     bottom: 0;
