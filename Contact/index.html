@@ -1,5 +1,5 @@
 <!----------------------------------------------
--- Jpwaters09.github.io About Page            --
+-- Jpwaters09.github.io Contact Page          --
 -- Language: HTML                             --
 -- Author: Jacob Waters                       --
 -- Github: github.com/jpwaters09              --
@@ -13,10 +13,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="About.css">
-    <script src="About.js"></script>
+    <link rel="stylesheet" href="Contact.css">
+    <script src="Contact.js"></script>
     <link rel="shortcut icon" href="../Assets/Logo.jpg" type="image/x-icon">
-    <title>About - Jacob Waters</title>
+    <title>Contact Me - Jacob Waters</title>
   </head>
   <body>
     <div id="topbar">
@@ -40,48 +40,17 @@
         </div>
     </div>
 
-    <div id="about">
-      <div id="mainTitle">
-        <img id="profileImg" src="../Assets/Logo.jpg">
-        <div id="summary">
-          <span id="title">I'm Jacob Waters</span>
-          <span id="aboutMe">A programming and 3D printing enthusiast sharing open-source tutorials <br> and projects across Python, HTML, CSS, JavaScript, C++, and C# on GitHub.</span>
-        </div>
-      </div>
-      <div id="skills">
-        <span id="skillsTitle">Skills</span>
-        <div id="languages">
-          <div id="python">
-            <img id="pythonLogo" src="../Assets/Python Logo.svg">
-            <span id="pythonSpan">Python</span>
-          </div>
+    <div id="contactForm">
+        <span id="getInTouch">Get in Touch</span>
 
-          <div id="html">
-            <img id="htmlLogo" src="../Assets/HTML Logo.svg">
-            <span id="htmlSpan">HTML</span>
-          </div>
+        <span id="notCompleted" style="display: none;">Please fill in all of the fields</span>
 
-          <div id="css">
-            <img id="cssLogo" src="../Assets/CSS Logo.svg">
-            <span id="cssSpan">CSS</span>
-          </div>
+        <input type="text" id="from" placeholder="Name">
+        <input type="text" id="subject" placeholder="Subject">
 
-          <div id="javascript">
-            <img id="javascriptLogo" src="../Assets/JavaScript Logo.svg">
-            <span id="javascriptSpan">JavaScript</span>
-          </div>
+        <textarea id="body" placeholder="Body"></textarea>
 
-          <div id="cpp">
-            <img id="cppLogo" src="../Assets/C++ Logo.svg">
-            <span id="cppSpan">C++</span>
-          </div>
-
-          <div id="cs">
-            <img id="csLogo" src="../Assets/CS Logo.svg">
-            <span id="csSpan">C#</span>
-          </div>
-        </div>
-      </div>
+        <button id="sendBtn" onclick="sendEmail()">Send</button>
     </div>
 
     <div id="footer">

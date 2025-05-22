@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////
-// Jpwaters09.github.io About Page            //
+// Jpwaters09.github.io Contact Page          //
 // Language: JavaScript                       //
 // Author: Jacob Waters                       //
 // Github: github.com/jpwaters09              //
@@ -8,6 +8,10 @@
 ////////////////////////////////////////////////
 
 let theme;
+
+let fromFocused = 0;
+let subjectFocused = 0;
+let bodyFocused = 0;
 
 function home() {
     window.location.href = "https://Jpwaters09.github.io";
@@ -18,15 +22,15 @@ function homeLink() {
 }
 
 function projectsLink() {
-    window.location.href = "https://Jpwaters09.github.io/projects";
+    window.location.href = "https://Jpwaters09.github.io/Projects";
 }
 
 function contactLink() {
-    window.location.href = "https://Jpwaters09.github.io/contactme";
+    window.location.href = "https://Jpwaters09.github.io/Contact";
 }
 
 function aboutLink() {
-    window.location.href = "https://Jpwaters09.github.io/about";
+    window.location.href = "https://Jpwaters09.github.io/About";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -37,13 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.body.style.backgroundColor = "#191919";
         document.getElementById("topbar").style.backgroundColor = "#292929";
+        document.getElementById("from").style.backgroundColor = "#292929";
+        document.getElementById("subject").style.backgroundColor = "#292929";
+        document.getElementById("body").style.backgroundColor = "#292929";
+        document.getElementById("sendBtn").style.backgroundColor = "#292929";
         document.getElementById("footer").style.backgroundColor = "#292929";
-        document.getElementById("python").style.backgroundColor = "#292929";
-        document.getElementById("html").style.backgroundColor = "#292929";
-        document.getElementById("css").style.backgroundColor = "#292929";
-        document.getElementById("javascript").style.backgroundColor = "#292929";
-        document.getElementById("cpp").style.backgroundColor = "#292929";
-        document.getElementById("cs").style.backgroundColor = "#292929";
 
         document.getElementById("homeBtn").style.color = "#ffffff";
         document.getElementById("homeLink").style.color = "#ffffff";
@@ -65,15 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("footerX").style.color = "#ffffff";
         document.getElementById("footerPatreon").style.color = "#ffffff";
         document.getElementById("footerPayPal").style.color = "#ffffff";
-        document.getElementById("title").style.color = "#ffffff";
-        document.getElementById("aboutMe").style.color = "#ffffff";
-        document.getElementById("skillsTitle").style.color = "#ffffff";
-        document.getElementById("pythonSpan").style.color = "#ffffff";
-        document.getElementById("htmlSpan").style.color = "#ffffff";
-        document.getElementById("cssSpan").style.color = "#ffffff";
-        document.getElementById("javascriptSpan").style.color = "#ffffff";
-        document.getElementById("cppSpan").style.color = "#ffffff";
-        document.getElementById("csSpan").style.color = "#ffffff";
+        document.getElementById("getInTouch").style.color = "#ffffff";
+        document.getElementById("from").style.caretColor = "#ffffff";
+        document.getElementById("from").style.color = "#ffffff";
+        document.getElementById("subject").style.caretColor = "#ffffff";
+        document.getElementById("subject").style.color = "#ffffff";
+        document.getElementById("body").style.caretColor = "#ffffff";
+        document.getElementById("body").style.color = "#ffffff";
+        document.getElementById("sendBtn").style.color = "#ffffff";
 
         document.getElementById("homeUnderline").style.border = "1px solid #dddddd";
         document.getElementById("projectsUnderline").style.border = "1px solid #dddddd";
@@ -98,6 +99,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("topbar").classList.add("transition");
             document.getElementById("toggle").classList.add("transition");
             document.getElementById("toggleSwitch").classList.add("transition");
+            document.getElementById("from").classList.add("transition");
+            document.getElementById("subject").classList.add("transition");
+            document.getElementById("body").classList.add("transition");
+            document.getElementById("sendBtn").classList.add("transition");
             document.getElementById("footer").classList.add("transition");
 
             document.getElementById("homeBtn").classList.add("transition");
@@ -120,21 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("footerX").classList.add("transition");
             document.getElementById("footerPatreon").classList.add("transition");
             document.getElementById("footerPayPal").classList.add("transition");
-            document.getElementById("title").classList.add("transition");
-            document.getElementById("aboutMe").classList.add("transition");
-            document.getElementById("skillsTitle").classList.add("transition");
-            document.getElementById("python").classList.add("transition");
-            document.getElementById("pythonSpan").classList.add("transition");
-            document.getElementById("html").classList.add("transition");
-            document.getElementById("htmlSpan").classList.add("transition");
-            document.getElementById("css").classList.add("transition");
-            document.getElementById("cssSpan").classList.add("transition");
-            document.getElementById("javascript").classList.add("transition");
-            document.getElementById("javascriptSpan").classList.add("transition");
-            document.getElementById("cpp").classList.add("transition");
-            document.getElementById("cppSpan").classList.add("transition");
-            document.getElementById("cs").classList.add("transition");
-            document.getElementById("csSpan").classList.add("transition");
+            document.getElementById("getInTouch").classList.add("transition");
         }, 300);
 
         theme = 0;
@@ -147,13 +138,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.body.style.backgroundColor = "#e9e9e9";
         document.getElementById("topbar").style.backgroundColor = "#d9d9d9";
+        document.getElementById("from").style.backgroundColor = "#d9d9d9";
+        document.getElementById("subject").style.backgroundColor = "#d9d9d9";
+        document.getElementById("body").style.backgroundColor = "#d9d9d9";
+        document.getElementById("sendBtn").style.backgroundColor = "#d9d9d9";
         document.getElementById("footer").style.backgroundColor = "#d9d9d9";
-        document.getElementById("python").style.backgroundColor = "#d9d9d9";
-        document.getElementById("html").style.backgroundColor = "#d9d9d9";
-        document.getElementById("css").style.backgroundColor = "#d9d9d9";
-        document.getElementById("javascript").style.backgroundColor = "#d9d9d9";
-        document.getElementById("cpp").style.backgroundColor = "#d9d9d9";
-        document.getElementById("cs").style.backgroundColor = "#d9d9d9";
 
         document.getElementById("homeBtn").style.color = "#000000";
         document.getElementById("homeLink").style.color = "#000000";
@@ -175,15 +164,14 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("footerX").style.color = "#000000";
         document.getElementById("footerPatreon").style.color = "#000000";
         document.getElementById("footerPayPal").style.color = "#000000";
-        document.getElementById("title").style.color = "#000000";
-        document.getElementById("aboutMe").style.color = "#000000";
-        document.getElementById("skillsTitle").style.color = "#000000";
-        document.getElementById("pythonSpan").style.color = "#000000";
-        document.getElementById("htmlSpan").style.color = "#000000";
-        document.getElementById("cssSpan").style.color = "#000000";
-        document.getElementById("javascriptSpan").style.color = "#000000";
-        document.getElementById("cppSpan").style.color = "#000000";
-        document.getElementById("csSpan").style.color = "#000000";
+        document.getElementById("getInTouch").style.color = "#000000";
+        document.getElementById("from").style.caretColor = "#000000";
+        document.getElementById("from").style.color = "#000000";
+        document.getElementById("subject").style.caretColor = "#000000";
+        document.getElementById("subject").style.color = "#000000";
+        document.getElementById("body").style.caretColor = "#000000";
+        document.getElementById("body").style.color = "#000000";
+        document.getElementById("sendBtn").style.color = "#000000";
 
         document.getElementById("homeUnderline").style.border = "1px solid #222222";
         document.getElementById("projectsUnderline").style.border = "1px solid #222222";
@@ -208,6 +196,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("topbar").classList.add("transition");
             document.getElementById("toggle").classList.add("transition");
             document.getElementById("toggleSwitch").classList.add("transition");
+            document.getElementById("from").classList.add("transition");
+            document.getElementById("subject").classList.add("transition");
+            document.getElementById("body").classList.add("transition");
+            document.getElementById("sendBtn").classList.add("transition");
             document.getElementById("footer").classList.add("transition");
 
             document.getElementById("homeBtn").classList.add("transition");
@@ -230,21 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("footerX").classList.add("transition");
             document.getElementById("footerPatreon").classList.add("transition");
             document.getElementById("footerPayPal").classList.add("transition");
-            document.getElementById("title").classList.add("transition");
-            document.getElementById("aboutMe").classList.add("transition");
-            document.getElementById("skillsTitle").classList.add("transition");
-            document.getElementById("python").classList.add("transition");
-            document.getElementById("pythonSpan").classList.add("transition");
-            document.getElementById("html").classList.add("transition");
-            document.getElementById("htmlSpan").classList.add("transition");
-            document.getElementById("css").classList.add("transition");
-            document.getElementById("cssSpan").classList.add("transition");
-            document.getElementById("javascript").classList.add("transition");
-            document.getElementById("javascriptSpan").classList.add("transition");
-            document.getElementById("cpp").classList.add("transition");
-            document.getElementById("cppSpan").classList.add("transition");
-            document.getElementById("cs").classList.add("transition");
-            document.getElementById("csSpan").classList.add("transition");
+            document.getElementById("getInTouch").classList.add("transition");
         }, 300);
         
         theme = 1;
@@ -399,6 +377,164 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("aboutUnderline").style.visibility = "hidden";
         }, 300)
     });
+
+    document.getElementById("from").addEventListener("focus", () => {
+        if (theme == 0) {
+            document.getElementById("from").style.backgroundColor = "#393939";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("from").style.backgroundColor = "#c9c9c9";
+        }
+
+        fromFocused = 1;
+    })
+
+    document.getElementById("from").addEventListener("blur", () => {
+        if (theme == 0) {
+            document.getElementById("from").style.backgroundColor = "#292929";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("from").style.backgroundColor = "#d9d9d9";
+        }
+
+        fromFocused = 0;
+    })
+
+    document.getElementById("from").addEventListener("mouseenter", () => {
+        if (theme == 0) {
+            document.getElementById("from").style.backgroundColor = "#393939";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("from").style.backgroundColor = "#c9c9c9";
+        }
+    })
+
+    document.getElementById("from").addEventListener("mouseleave", () => {
+        if (fromFocused == 0) {
+            if (theme == 0) {
+                document.getElementById("from").style.backgroundColor = "#292929";
+            }
+            
+            else if (theme == 1) {
+                document.getElementById("from").style.backgroundColor = "#d9d9d9";
+            }
+        }
+    })
+
+    document.getElementById("subject").addEventListener("focus", () => {
+        if (theme == 0) {
+            document.getElementById("subject").style.backgroundColor = "#393939";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("subject").style.backgroundColor = "#c9c9c9";
+        }
+
+        subjectFocused = 1;
+    })
+
+    document.getElementById("subject").addEventListener("blur", () => {
+        if (theme == 0) {
+            document.getElementById("subject").style.backgroundColor = "#292929";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("subject").style.backgroundColor = "#d9d9d9";
+        }
+
+        subjectFocused = 0;
+    })
+
+    document.getElementById("subject").addEventListener("mouseenter", () => {
+        if (theme == 0) {
+            document.getElementById("subject").style.backgroundColor = "#393939";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("subject").style.backgroundColor = "#c9c9c9";
+        }
+    })
+
+    document.getElementById("subject").addEventListener("mouseleave", () => {
+        if (subjectFocused == 0) {
+            if (theme == 0) {
+                document.getElementById("subject").style.backgroundColor = "#292929";
+            }
+            
+            else if (theme == 1) {
+                document.getElementById("subject").style.backgroundColor = "#d9d9d9";
+            }
+        }
+    })
+
+    document.getElementById("body").addEventListener("focus", () => {
+        if (theme == 0) {
+            document.getElementById("body").style.backgroundColor = "#393939";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("body").style.backgroundColor = "#c9c9c9";
+        }
+
+        bodyFocused = 1;
+    })
+
+    document.getElementById("body").addEventListener("blur", () => {
+        if (theme == 0) {
+            document.getElementById("body").style.backgroundColor = "#292929";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("body").style.backgroundColor = "#d9d9d9";
+        }
+
+        bodyFocused = 0;
+    })
+
+    document.getElementById("body").addEventListener("mouseenter", () => {
+        if (theme == 0) {
+            document.getElementById("body").style.backgroundColor = "#393939";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("body").style.backgroundColor = "#c9c9c9";
+        }
+    })
+
+    document.getElementById("body").addEventListener("mouseleave", () => {
+        if (bodyFocused == 0) {
+            if (theme == 0) {
+                document.getElementById("body").style.backgroundColor = "#292929";
+            }
+            
+            else if (theme == 1) {
+                document.getElementById("body").style.backgroundColor = "#d9d9d9";
+            }
+        }
+    })
+
+    document.getElementById("sendBtn").addEventListener("mouseenter", () => {
+        if (theme == 0) {
+            document.getElementById("sendBtn").style.backgroundColor = "#393939";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("sendBtn").style.backgroundColor = "#c9c9c9";
+        }
+    })
+
+    document.getElementById("sendBtn").addEventListener("mouseleave", () => {
+        if (theme == 0) {
+            document.getElementById("sendBtn").style.backgroundColor = "#292929";
+        }
+        
+        else if (theme == 1) {
+            document.getElementById("sendBtn").style.backgroundColor = "#d9d9d9";
+        }
+    })
 
     document.getElementById("footerEmail").addEventListener("mouseenter", () => {
         if (theme == 0) {
@@ -607,13 +743,11 @@ function toggle() {
 
         document.body.style.backgroundColor = "#e9e9e9";
         document.getElementById("topbar").style.backgroundColor = "#d9d9d9";
+        document.getElementById("from").style.backgroundColor = "#d9d9d9";
+        document.getElementById("subject").style.backgroundColor = "#d9d9d9";
+        document.getElementById("body").style.backgroundColor = "#d9d9d9";
+        document.getElementById("sendBtn").style.backgroundColor = "#d9d9d9";
         document.getElementById("footer").style.backgroundColor = "#d9d9d9";
-        document.getElementById("python").style.backgroundColor = "#d9d9d9";
-        document.getElementById("html").style.backgroundColor = "#d9d9d9";
-        document.getElementById("css").style.backgroundColor = "#d9d9d9";
-        document.getElementById("javascript").style.backgroundColor = "#d9d9d9";
-        document.getElementById("cpp").style.backgroundColor = "#d9d9d9";
-        document.getElementById("cs").style.backgroundColor = "#d9d9d9";
 
         document.getElementById("homeBtn").style.color = "#000000";
         document.getElementById("homeLink").style.color = "#000000";
@@ -635,15 +769,14 @@ function toggle() {
         document.getElementById("footerX").style.color = "#000000";
         document.getElementById("footerPatreon").style.color = "#000000";
         document.getElementById("footerPayPal").style.color = "#000000";
-        document.getElementById("title").style.color = "#000000";
-        document.getElementById("aboutMe").style.color = "#000000";
-        document.getElementById("skillsTitle").style.color = "#000000";
-        document.getElementById("pythonSpan").style.color = "#000000";
-        document.getElementById("htmlSpan").style.color = "#000000";
-        document.getElementById("cssSpan").style.color = "#000000";
-        document.getElementById("javascriptSpan").style.color = "#000000";
-        document.getElementById("cppSpan").style.color = "#000000";
-        document.getElementById("csSpan").style.color = "#000000";
+        document.getElementById("getInTouch").style.color = "#000000";
+        document.getElementById("from").style.caretColor = "#000000";
+        document.getElementById("from").style.color = "#000000";
+        document.getElementById("subject").style.caretColor = "#000000";
+        document.getElementById("subject").style.color = "#000000";
+        document.getElementById("body").style.caretColor = "#000000";
+        document.getElementById("body").style.color = "#000000";
+        document.getElementById("sendBtn").style.color = "#000000";
 
         document.getElementById("homeUnderline").style.border = "1px solid #222222";
         document.getElementById("projectsUnderline").style.border = "1px solid #222222";
@@ -674,13 +807,11 @@ function toggle() {
 
         document.body.style.backgroundColor = "#191919";
         document.getElementById("topbar").style.backgroundColor = "#292929";
+        document.getElementById("from").style.backgroundColor = "#292929";
+        document.getElementById("subject").style.backgroundColor = "#292929";
+        document.getElementById("body").style.backgroundColor = "#292929";
+        document.getElementById("sendBtn").style.backgroundColor = "#292929";
         document.getElementById("footer").style.backgroundColor = "#292929";
-        document.getElementById("python").style.backgroundColor = "#292929";
-        document.getElementById("html").style.backgroundColor = "#292929";
-        document.getElementById("css").style.backgroundColor = "#292929";
-        document.getElementById("javascript").style.backgroundColor = "#292929";
-        document.getElementById("cpp").style.backgroundColor = "#292929";
-        document.getElementById("cs").style.backgroundColor = "#292929";
 
         document.getElementById("homeBtn").style.color = "#ffffff";
         document.getElementById("homeLink").style.color = "#ffffff";
@@ -702,15 +833,14 @@ function toggle() {
         document.getElementById("footerX").style.color = "#ffffff";
         document.getElementById("footerPatreon").style.color = "#ffffff";
         document.getElementById("footerPayPal").style.color = "#ffffff";
-        document.getElementById("title").style.color = "#ffffff";
-        document.getElementById("aboutMe").style.color = "#ffffff";
-        document.getElementById("skillsTitle").style.color = "#ffffff";
-        document.getElementById("pythonSpan").style.color = "#ffffff";
-        document.getElementById("htmlSpan").style.color = "#ffffff";
-        document.getElementById("cssSpan").style.color = "#ffffff";
-        document.getElementById("javascriptSpan").style.color = "#ffffff";
-        document.getElementById("cppSpan").style.color = "#ffffff";
-        document.getElementById("csSpan").style.color = "#ffffff";
+        document.getElementById("getInTouch").style.color = "#ffffff";
+        document.getElementById("from").style.caretColor = "#ffffff";
+        document.getElementById("from").style.color = "#ffffff";
+        document.getElementById("subject").style.caretColor = "#ffffff";
+        document.getElementById("subject").style.color = "#ffffff";
+        document.getElementById("body").style.caretColor = "#ffffff";
+        document.getElementById("body").style.color = "#ffffff";
+        document.getElementById("sendBtn").style.color = "#ffffff";
 
         document.getElementById("homeUnderline").style.border = "1px solid #dddddd";
         document.getElementById("projectsUnderline").style.border = "1px solid #dddddd";
@@ -733,4 +863,35 @@ function toggle() {
         theme = 0;
         localStorage.setItem("Theme", "0");
     }
+}
+
+function sendEmail() {
+    let notCompleted = document.getElementById("notCompleted");
+    let from = document.getElementById("from");
+    let subject = document.getElementById("subject");
+    let body = document.getElementById("body");
+
+    if (!from.value) {
+        notCompleted.style.display = "";
+        return;
+    }
+
+    else if (!subject.value) {
+        notCompleted.style.display = "";
+        return;
+    }
+
+    else if (!body.value) {
+        notCompleted.style.display = "";
+        return;
+    }
+
+    let emailSubject = encodeURIComponent(subject.value);
+    let emailBody = encodeURIComponent(body.value + "\n\nFrom: " + from.value);
+
+    window.location.href = `mailto:jpwaters09.business@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+
+    from.value = "";
+    subject.value = "";
+    body.value = "";
 }

@@ -1,5 +1,5 @@
 /***********************************************
-** Jpwaters09.github.io Page                  **
+** Jpwaters09.github.io Contact Page          **
 ** Language: CSS                              **
 ** Author: Jacob Waters                       **
 ** Github: github.com/jpwaters09              **
@@ -142,6 +142,88 @@ body.transition {
     font-size: medium;
     font-weight: 500;
     user-select: none;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    width: 100%;
+}
+
+#getInTouch {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+    user-select: none;
+}
+
+#getInTouch.transition {
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#notCompleted {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ff0000;
+    font-size: medium;
+    margin-bottom: 20px;
+}
+
+#from {
+    border-radius: 10px;
+    padding: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    outline: none;
+    border: none;
+    width: 200px;
+    box-shadow: 0px 0px 5px 2px #00000050;
+    margin-bottom: 20px;
+}
+
+#subject {
+    border-radius: 10px;
+    padding: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    outline: none;
+    border: none;
+    width: 400px;
+    box-shadow: 0px 0px 5px 2px #00000050;
+    margin-bottom: 20px;
+}
+
+#body {
+    border-radius: 10px;
+    padding: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    outline: none;
+    border: none;
+    width: 400px;
+    height: 200px;
+    box-shadow: 0px 0px 5px 2px #00000050;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+#sendBtn {
+    border-radius: 10px;
+    padding: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    outline: none;
+    border: none;
+    width: 100px;
+    box-shadow: 0px 0px 5px 2px #00000050;
+    resize: none;
+}
+
+#from.transition, #subject.transition, #body.transition, #sendBtn.transition {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #footer {
