@@ -1,0 +1,121 @@
+<!----------------------------------------------
+-- Jpwaters09.github.io Projects Page         --
+-- Language: HTML                             --
+-- Author: Jacob Waters                       --
+-- Github: github.com/jpwaters09              --
+-- Copyright (c) 2025 Jacob Waters            --
+-- Contact me: jpwaters09.business@gmail.com  --
+----------------------------------------------->
+
+<!DOCTYPE html>
+
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Projects.css">
+    <script src="Projects.js"></script>
+    <link rel="shortcut icon" href="../Assets/Logo.jpg" type="image/x-icon">
+    <title>Projects - Jacob Waters</title>
+  </head>
+  <body>
+    <div id="topbar">
+        <button id="homeBtn" onclick="home()">
+            <img id="logo" src="../Assets/Logo.jpg">
+            <span id="name">Jacob Waters</span>
+        </button>
+
+        <div id="links">
+            <button id="homeLink" onclick="homeLink()">Home<hr id="homeUnderline"></button>
+            <button id="projectsLink" onclick="projectsLink()">Projects<hr id="projectsUnderline"></button>
+            <button id="contactLink" onclick="contactLink()">Contact<hr id="contactUnderline"></button>
+            <button id="aboutLink" onclick="aboutLink()">About<hr id="aboutUnderline"></button>
+        </div>
+
+        <div id="modeSwitch">
+          <span id="modeSwitchSpan">Theme</span>
+          <div id="toggleSwitch">
+            <div id="toggle" onclick="toggle()"></div>
+          </div>
+        </div>
+    </div>
+
+    <div id="projects">
+        <div id="raspberryPiProjects">
+            <span id="raspberryPiProjectsTitle">Raspberry Pi</span>
+
+            <div id="raspberryPiProjectsList">
+                <div id="activeBuzzer">
+                    <img id="activeBuzzerImg" src="../Assets/Projects/Raspberry Pi/Active Buzzer.png">
+                    <span id="activeBuzzerTitle">Active Buzzer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+      <span id="footerTitle">Jacob Waters</span>
+      <span id="footerSubtitle">Copyright © 2025 Jacob Waters</span>
+
+      <div id="footerLinks">
+        <div id="footerLeft">
+          <div id="footerEmailDiv">
+              <img id="footerEmailIcon">
+
+              <div id="footerEmailRight">
+                <span id="footerEmailSpan">Email</span>
+                <button id="footerEmail" onclick="footerEmail()">jpwaters09.business@gmail.com<hr id="footerEmailUnderline"></button>
+              </div>
+          </div>
+
+          <div id="footerEmailDiv">
+              <img id="footerWebsiteIcon">
+
+              <div id="footerWebsiteRight">
+                <span id="footerWebsiteSpan">Website</span>
+                <button id="footerWebsite" onclick="footerWebsite()">https://Jpwaters09.github.io<hr id="footerWebsiteUnderline"></button>
+              </div>
+          </div>
+
+          <div id="footerGitHubDiv">
+              <img id="footerGitHubIcon">
+
+              <div id="footerGitHubRight">
+                <span id="footerGitHubSpan">GitHub</span>
+                <button id="footerGitHub" onclick="footerGitHub()">https://github.com/Jpwaters09<hr id="footerGitHubUnderline"></button>
+              </div>
+          </div>
+        </div>
+
+        <div id="footerRight">
+          <div id="footerXDiv">
+              <img id="footerXIcon">
+
+              <div id="footerXRight">
+                <span id="footerXSpan">X</span>
+                <button id="footerX" onclick="footerX()">https://x.com/Jpwaters09<hr id="footerXUnderline"></button>
+              </div>
+          </div>
+
+          <div id="footerPatreonDiv">
+              <img id="footerPatreonIcon">
+
+              <div id="footerPatreonRight">
+                <span id="footerPatreonSpan">Patreon</span>
+                <button id="footerPatreon" onclick="footerPatreon()">https://patreon.com/Jpwaters09<hr id="footerPatreonUnderline"></button>
+              </div>
+          </div>
+
+          <div id="footerPayPalDiv">
+              <img id="footerPayPalIcon">
+
+              <div id="footerPayPalRight">
+                <span id="footerPayPalSpan">PayPal</span>
+                <button id="footerPayPal" onclick="footerPayPal()">https://paypal.me/JacobW120<hr id="footerPayPalUnderline"></button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
