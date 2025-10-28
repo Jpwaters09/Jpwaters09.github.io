@@ -134,7 +134,7 @@ main {
     flex-direction: column;
     gap: 20px;
     flex-grow: 1;
-    padding: 20px;
+    padding: 50px;
 }
 
 footer {
