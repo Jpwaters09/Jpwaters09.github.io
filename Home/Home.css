@@ -4,6 +4,7 @@ html, body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 header {
@@ -40,24 +41,75 @@ header {
     color: #38BDF8;
 }
 
-#headerLinks {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+#headerLinksDesktop, #headerLinksMobile {
+    display: none;
 }
 
-#headerLinks a {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: medium;
-    color: #CBD5E1;
-    text-decoration: none;
-    transition: color 0.3s ease;
+@media (min-width: 769px) {
+    #headerLinksDesktop {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #headerLinksDesktop a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: medium;
+        color: #CBD5E1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    #headerLinksDesktop a:hover {
+        color: #38BDF8;
+    }
 }
 
-#headerLinks a:hover {
-    color: #38BDF8;
+@media (max-width: 768px) {
+    #headerLinksMobile {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #menuButton, #menuCloseButton {
+        background-color: #00000000;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    #headerLinksMobileMenu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        background-color: #0F172A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    #headerLinksMobileMenu a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: xx-large;
+        color: #CBD5E1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    #headerLinksMobileMenu a:hover {
+        color: #38BDF8;
+    }
 }
 
 main {
