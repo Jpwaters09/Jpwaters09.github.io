@@ -66,11 +66,21 @@ header {
         color: #38BDF8;
     }
 
-    #footerDesktop {
+    footer {
         display: grid;
         grid-template-columns: auto auto auto auto;
         padding: 20px;
         align-items: center;
+        background-color: #1E293B;
+        border-top: 1px solid #334155;
+        box-shadow: 0px 0px 5px 0.5px #334155;
+        margin-top: auto;
+    }
+
+    #pageTitleButtons {
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
     }
 }
 
@@ -118,12 +128,22 @@ header {
         color: #38BDF8;
     }
 
-    #footerMobile {
+    footer {
         padding: 20px;
         align-items: center;
         display: flex;
         flex-direction: column;
         gap: 25px;
+        background-color: #1E293B;
+        border-top: 1px solid #334155;
+        box-shadow: 0px 0px 5px 0.5px #334155;
+        margin-top: auto;
+    }
+
+    #pageTitleButtons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
@@ -135,13 +155,6 @@ main {
     gap: 20px;
     flex-grow: 1;
     padding: 50px;
-}
-
-footer {
-    background-color: #1E293B;
-    border-top: 1px solid #334155;
-    box-shadow: 0px 0px 5px 0.5px #334155;
-    margin-top: auto;
 }
 
 #text {
