@@ -1,108 +1,62 @@
-<!----------------------------------------------
--- Jpwaters09.github.io Page                  --
--- Language: HTML                             --
--- Author: Jacob Waters                       --
--- Github: github.com/jpwaters09              --
--- Copyright (c) 2025 Jacob Waters            --
--- Contact me: jpwaters09.business@gmail.com  --
------------------------------------------------>
-
 <!DOCTYPE html>
 
 <html lang="en-GB">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Home/Home.css">
-    <script src="Home/Home.js"></script>
-    <link rel="shortcut icon" href="Assets/Logo.jpg" type="image/x-icon">
-    <title>Home - Jacob Waters</title>
-  </head>
-  <body>
-    <div id="topbar">
-        <button id="homeBtn" onclick="home()">
-            <img id="logo" src="Assets/Logo.jpg">
-            <span id="name">Jacob Waters</span>
-        </button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/Assets/Profile-Picture.png">
+        <link rel="stylesheet" href="/Home/Home.css">
+        <title>Jacob Waters - Home</title>
+    </head>
+    <body>
+        <header>
+            <div id="headerTitle" onclick="location.href='/'">
+                <img id="headerTitleImg" src="/Assets/Profile-Picture.png"/>
+                <span id="headerTitleText">Jacob Waters</span>
+            </div>
 
-        <div id="links">
-            <button id="homeLink" onclick="homeLink()">Home<hr id="homeUnderline"></button>
-            <button id="projectsLink" onclick="projectsLink()">Projects<hr id="projectsUnderline"></button>
-            <button id="contactLink" onclick="contactLink()">Contact<hr id="contactUnderline"></button>
-            <button id="aboutLink" onclick="aboutLink()">About<hr id="aboutUnderline"></button>
-        </div>
+            <div id="headerLinks">
+                <a href="/" id="homeLink">Home</a>
+            </div>
+        </header>
 
-        <div id="modeSwitch">
-          <span id="modeSwitchSpan">Theme</span>
-          <div id="toggleSwitch">
-            <div id="toggle" onclick="toggle()"></div>
-          </div>
-        </div>
-    </div>
+        <main>
+            <div id="pageTitle">
+                <span id="pageTitleText">Jacob Waters</span>
+                <span id="pageTitleSubheading">Programming and 3D printing enthusiast sharing open-source tutorials and projects.</span>
+                <div id="pageTitleButtons">
+                    <button id="visitShopButton" onclick="location.href='/shop'">Visit My Shop</button>
+                    <button id="viewProjectsButton" onclick="location.href='/projects'">View My Projects</button>
+                </div>
+            </div>
 
-    <div id="footer">
-      <span id="footerTitle">Jacob Waters</span>
-      <span id="footerSubtitle">Copyright © 2025 Jacob Waters</span>
+            <div id="learnMore">
+                <span id="learnMoreText">Welcome to my website! I am a dedicated programmer with expertise in HTML, CSS, JavaScript, Python, C++, and C#. In addition to my programming skills, I am an enthusiastic 3D printing advocate, focusing on innovative projects and sharing open-source tutorials.</span>
+                <button id="learnMoreButton" onclick="location.href='/about'">Learn More About Me</button>
+            </div>
+        </main>
 
-      <div id="footerLinks">
-        <div id="footerLeft">
-          <div id="footerEmailDiv">
-              <img id="footerEmailIcon">
+        <footer>
+            <span id="copyright">Copyright © 2025 Jacob Waters</span>
 
-              <div id="footerEmailRight">
-                <span id="footerEmailSpan">Email</span>
-                <button id="footerEmail" onclick="footerEmail()">jpwaters09.business@gmail.com<hr id="footerEmailUnderline"></button>
-              </div>
-          </div>
+            <div id="quickLinks">
+                <span id="quickLinksTitle">Quick Links</span>
+                <a href="/" id="homeQuickLink">Home</a>
+                <a href="/projects" id="projectsQuickLink">Projects</a>
+                <a href="/shop" id="shopQuickLink">Shop</a>
+                <a href="/about" id="aboutQuickLink">About</a>
+            </div>
 
-          <div id="footerEmailDiv">
-              <img id="footerWebsiteIcon">
+            <div id="contact">
+                <span id="contactTitle">Contact Me</span>
+                <a href="mailto:jpwaters09.business@gmail.com" id="contactEmail">jpwaters09.business@gmail.com</a>
+            </div>
 
-              <div id="footerWebsiteRight">
-                <span id="footerWebsiteSpan">Website</span>
-                <button id="footerWebsite" onclick="footerWebsite()">https://Jpwaters09.github.io<hr id="footerWebsiteUnderline"></button>
-              </div>
-          </div>
-
-          <div id="footerGitHubDiv">
-              <img id="footerGitHubIcon">
-
-              <div id="footerGitHubRight">
-                <span id="footerGitHubSpan">GitHub</span>
-                <button id="footerGitHub" onclick="footerGitHub()">https://github.com/Jpwaters09<hr id="footerGitHubUnderline"></button>
-              </div>
-          </div>
-        </div>
-
-        <div id="footerRight">
-          <div id="footerXDiv">
-              <img id="footerXIcon">
-
-              <div id="footerXRight">
-                <span id="footerXSpan">X</span>
-                <button id="footerX" onclick="footerX()">https://x.com/Jpwaters09<hr id="footerXUnderline"></button>
-              </div>
-          </div>
-
-          <div id="footerPatreonDiv">
-              <img id="footerPatreonIcon">
-
-              <div id="footerPatreonRight">
-                <span id="footerPatreonSpan">Patreon</span>
-                <button id="footerPatreon" onclick="footerPatreon()">https://patreon.com/Jpwaters09<hr id="footerPatreonUnderline"></button>
-              </div>
-          </div>
-
-          <div id="footerPayPalDiv">
-              <img id="footerPayPalIcon">
-
-              <div id="footerPayPalRight">
-                <span id="footerPayPalSpan">PayPal</span>
-                <button id="footerPayPal" onclick="footerPayPal()">https://paypal.me/JacobW120<hr id="footerPayPalUnderline"></button>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+            <div id="socialLinks">
+                <a href="https://github.com/jpwaters09/" id="githubSocialLink"><img id="hdfgujs" width="25px" src="/Assets/Github-Logo.svg"></a>
+                <a href="https://x.com/jpwaters09/" id="xSocialLink"><img width="25px" src="/Assets/X-Logo.svg"></a>
+                <a href="https://patreon.com/jpwaters09/" id="patreonSocialLink"><img width="25px" src="/Assets/Patreon-Logo.svg"></a>
+            </div>
+        </footer>
+    </body>
 </html>
