@@ -41,7 +41,7 @@ header {
     color: #38BDF8;
 }
 
-#headerLinksDesktop, #headerLinksMobile {
+#headerLinksDesktop, #headerLinksMobile, #footerDesktop, #footerMobile {
     display: none;
 }
 
@@ -64,6 +64,13 @@ header {
 
     #headerLinksDesktop a:hover {
         color: #38BDF8;
+    }
+
+    #footerDesktop {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 20px;
+        align-items: center;
     }
 }
 
@@ -110,6 +117,14 @@ header {
     #headerLinksMobileMenu a:hover {
         color: #38BDF8;
     }
+
+    #footerMobile {
+        padding: 20px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
 }
 
 main {
@@ -120,6 +135,13 @@ main {
     gap: 20px;
     flex-grow: 1;
     padding: 20px;
+}
+
+footer {
+    background-color: #1E293B;
+    border-top: 1px solid #334155;
+    box-shadow: 0px 0px 5px 0.5px #334155;
+    margin-top: auto;
 }
 
 #text {
@@ -138,17 +160,6 @@ main {
     text-align: center;
     color: #CBD5E1;
     line-height: 1.5;
-}
-
-footer {
-    background-color: #1E293B;
-    border-top: 1px solid #334155;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding: 20px;
-    align-items: center;
-    margin-top: auto;
-    box-shadow: 0px 0px 5px 0.5px #334155;
 }
 
 #copyright {
