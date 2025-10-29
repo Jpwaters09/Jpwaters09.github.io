@@ -11,7 +11,8 @@ Colours:
     Text Button: #CBD5E1
     Text Button Hover: #38BDF8
 
-Gap: 15px
+Line Height: 1.5
+
 
 Buttons:
     Border Radius: 5px
