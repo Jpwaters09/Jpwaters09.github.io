@@ -1,0 +1,218 @@
+html, body {
+    margin: 0;
+    background-color: #0F172A;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1E293B;
+    height: 70px;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 0px 5px 0.5px #334155;
+}
+
+#headerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+#headerTitleImg {
+    height: 50px;
+}
+
+#headerTitleText {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-weight: 600;
+    color: #CBD5E1;
+    transition: color 0.3s ease;
+}
+
+#headerTitleText:hover {
+    color: #38BDF8;
+}
+
+#headerLinksDesktop, #headerLinksMobile, #footerDesktop, #footerMobile {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    #headerLinksDesktop {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #headerLinksDesktop a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: medium;
+        color: #CBD5E1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    #headerLinksDesktop a:hover {
+        color: #38BDF8;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 20px;
+        align-items: center;
+        background-color: #1E293B;
+        border-top: 1px solid #334155;
+        box-shadow: 0px 0px 5px 0.5px #334155;
+        margin-top: auto;
+    }
+
+    #pageTitleButtons {
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    #headerLinksMobile {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #menuButton, #menuCloseButton {
+        background-color: #00000000;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    #headerLinksMobileMenu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        background-color: #0F172A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    #headerLinksMobileMenu a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: xx-large;
+        color: #CBD5E1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    #headerLinksMobileMenu a:hover {
+        color: #38BDF8;
+    }
+
+    footer {
+        padding: 20px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        background-color: #1E293B;
+        border-top: 1px solid #334155;
+        box-shadow: 0px 0px 5px 0.5px #334155;
+        margin-top: auto;
+    }
+
+    #pageTitleButtons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    padding: 50px;
+}
+
+#text {
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #F1F5F9;
+    line-height: 1.5;
+}
+
+#subText {
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #CBD5E1;
+    line-height: 1.5;
+}
+
+#copyright {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    color: #F1F5F9;
+    text-align: center;
+}
+
+#quickLinks, #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#quickLinksTitle, #contactTitle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #F1F5F9;
+    font-weight: 500;
+    font-size: medium;
+}
+
+#quickLinks a, #contactEmail {
+    color: #CBD5E1;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    transition: color 0.3s ease;
+}
+
+#quickLinks a:hover, #contactEmail:hover {
+    color: #38BDF8;
+}
+
+#socialLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
