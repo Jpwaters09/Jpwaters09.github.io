@@ -150,7 +150,7 @@ header {
 main {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    padding: 50px;
     flex-grow: 1;
     flex-direction: column;
     gap: 100px;
