@@ -26,6 +26,7 @@ async function signUp() {
     let signUpEmail = document.getElementById("signUpEmail")
     let signUpPassword = document.getElementById("signUpPassword");
     let signUpPasswordConfirm = document.getElementById("signUpPasswordConfirm");
+    let signUpButton = document.getElementById("signUpButton");
     let output = document.getElementById("output");
     let emailConfirm = document.getElementById("emailConfirm");
     let emailConfirmSubtitle = document.getElementById("emailConfirmSubtitle");
@@ -37,24 +38,31 @@ async function signUp() {
 
     output.textContent = "";
 
+    signUpName.style.display = "none";
+    signUpEmail.style.display = "none";
+    signUpPassword.style.display = "none";
+    signUpPasswordConfirm.style.display = "none";
+    signUpButton.style.display = "none";
+
     const {data, error} = await supabase.auth.signUp({email: signUpEmail.value, password: signUpPassword.value});
 
     if (error) {
         output.textContent = error.message;
-        alert(error.message)
+        signUpName.style.display = "";
+        signUpEmail.style.display = "";
+        signUpPassword.style.display = "";
+        signUpPasswordConfirm.style.display = "";
+        signUpButton.style.display = "";
+        
         return;
     }
 
     const user = data.user;
 
-    if (!user) {
-        output.textContent = "Check your email to confirm your account.";
-        return;
-    }
-
     await supabase
-        .from("users")
-        .insert([{id: user.id, email: user.email, profile: {name: signUpName.value}}]);
+        .from("accounts")
+        .update({profile: {name: signUpName.value}})
+        .eq("id", user.id);
 
     signUpForm.style.display = "none";
     emailConfirm.style.display = "";
