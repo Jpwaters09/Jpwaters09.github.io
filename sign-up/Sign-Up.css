@@ -41,19 +41,7 @@ header {
     color: #38BDF8;
 }
 
-#headerLinksDesktop, #headerLinksMobile, #footerDesktop, #footerMobile {
-    display: none;
-}
-
 @media (min-width: 769px) {
-    #headerLinksDesktop {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-    }
-
     #headerLinksDesktop a {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: medium;
@@ -76,90 +64,9 @@ header {
         box-shadow: 0px 0px 5px 0.5px #334155;
         margin-top: auto;
     }
-
-    #pageTitleButtons {
-        display: flex;
-        flex-direction: row;
-        gap: 80px;
-    }
-
-    #signUpButton {
-        border-radius: 5px;
-        background-color: #1E3A8A;
-        border: none;
-        padding: 10px 20px;
-        color: #F1F5F9;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: small;
-        transition: background-color 0.3s ease;
-        cursor: pointer;
-    }
-
-    #signUpButton:hover {
-        background-color: #1E40AF;
-    }
-
-    #signInButton {
-        border-radius: 5px;
-        background-color: #334155;
-        border: none;
-        padding: 10px 20px;
-        color: #F1F5F9;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: small;
-        transition: background-color 0.3s ease;
-        cursor: pointer;
-    }
-
-    #signInButton:hover {
-        background-color: #475569;
-    }
 }
 
 @media (max-width: 768px) {
-    #headerLinksMobile {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #menuButton, #menuCloseButton {
-        background-color: #00000000;
-        border: none;
-        cursor: pointer;
-        z-index: 2;
-    }
-
-    #headerLinksMobileMenu {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 1;
-        background-color: #0F172A;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-    }
-
-    #headerLinksMobileMenu a {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: xx-large;
-        color: #CBD5E1;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    #headerLinksMobileMenu a:hover {
-        color: #38BDF8;
-    }
-
     footer {
         padding: 20px;
         align-items: center;
@@ -171,91 +78,162 @@ header {
         box-shadow: 0px 0px 5px 0.5px #334155;
         margin-top: auto;
     }
-
-    #pageTitleButtons {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
 }
 
 main {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 50px;
     flex-grow: 1;
     flex-direction: column;
     gap: 100px;
 }
 
-#pageTitle, #learnMore {
+#signUpForm {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    background-color: #1E293B;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    padding: 20px;
+    gap: 40px;
+    width: 400px;
 }
 
-#pageTitleText {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#signUpFormTitle {
     font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     color: #F1F5F9;
     text-align: center;
 }
 
-#pageTitleSubheading {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: x-large;
-    font-weight: 500;
-    color: #CBD5E1;
-    text-align: center;
-    width: 70%;
-    line-height: 1.5;
-}
-
-#visitShopButton, #viewProjectsButton {
-    border-radius: 5px;
+#signUpName, #signUpEmail, #signUpPasswordConfirm {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: medium;
+    border-radius: 5px;
+    background-color: #334155;
     border: none;
-    background-color: #1E3A8A;
-    padding: 10px 20px;
     color: #F1F5F9;
-    cursor: pointer;
-    font-weight: 500;
+    padding: 10px;
+    outline: none;
+    display: flex;
     transition: background-color 0.3s ease;
 }
 
-#visitShopButton:hover, #viewProjectsButton:hover {
+#signUpName::placeholder, #signUpEmail::placeholder, #signUpPassword::placeholder, #signUpPasswordConfirm::placeholder {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    color: #CBD5E1;
+}
+
+#signUpName:hover, #signUpEmail:hover, #signUpPasswordConfirm:hover {
+    background-color: #475569;
+}
+
+#signUpName:focus, #signUpEmail:focus, #signUpPasswordConfirm:focus {
+    background-color: #475569;
+}
+
+#password, #passwordConfirm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+#signUpPassword {
+    flex: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    border-radius: 5px;
+    background-color: #334155;
+    border: none;
+    color: #F1F5F9;
+    padding: 10px;
+    outline: none;
+    display: flex;
+    transition: background-color 0.3s ease;
+}
+
+#signUpPassword:hover {
+    background-color: #475569;
+}
+
+#signUpPassword:focus {
+    background-color: #475569;
+}
+
+#passwordEye, #passwordConfirmEye {
+    border: none;
+    background-color: #00000000;
+    cursor: pointer;
+}
+
+#output {
+    color: #ff0000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: medium;
+}
+
+#signUpButton {
+    background-color: #1E3A8A;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #F1F5F9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#signUpButton:hover {
     background-color: #1E40AF;
 }
 
-#learnMoreText {
-    color: #CBD5E1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: large;
-    text-align: center;
-    font-weight: 500;
-    width: 70%;
-    line-height: 1.5;
+#emailConfirm {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
-#learnMoreButton {
-    border-radius: 5px;
+#emailConfirmTitle {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: medium;
+    font-weight: 600;
+    font-size: xx-large;
+    color: #F1F5F9;
+}
+
+#emailConfirmSubtitle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    text-align: center;
+    line-height: 1.5;
+    color: #CBD5E1;
+}
+
+#emailConfirmReturnBtn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: #1E3A8A;
     border: none;
-    background-color: #334155;
     padding: 10px 20px;
     color: #F1F5F9;
-    cursor: pointer;
-    font-weight: 500;
+    font-size: medium;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-#learnMoreButton:hover {
-    background-color: #475569;
+#emailConfirmReturnBtn:hover {
+    background-color: #1E40AF;
 }
 
 #copyright {

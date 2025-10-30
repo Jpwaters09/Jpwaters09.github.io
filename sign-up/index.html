@@ -22,10 +22,11 @@
         <meta property="og:type" content="website">
 
         <link rel="icon" type="image/png" href="/assets/Profile-Picture.png">
-        <link rel="stylesheet" href="/home/Home.css">
-        <script src="/home/Home.js"></script>
+        <link rel="stylesheet" href="/sign-up/Sign-Up.css">
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="/sign-up/Sign-Up.js"></script>
         
-        <title>Home - Jacob Waters</title>
+        <title>Sign Up - Jacob Waters</title>
     </head>
     <body>
         <header>
@@ -33,43 +34,34 @@
                 <img id="headerTitleImg" src="/assets/Profile-Picture.png" alt="Profile Picture"/>
                 <span id="headerTitleText">Jacob Waters</span>
             </div>
-
-            <div id="headerLinksDesktop">
-                <a href="/">Home</a>
-                <a href="/projects">Projects</a>
-                <a href="/shop">Shop</a>
-                <a href="/about">About</a>
-
-                <button id="signInButton">Sign In</button>
-                <button id="signUpButton" onclick="location.href='/sign-up/'">Sign Up</button>
-            </div>
-
-            <div id="headerLinksMobile">
-                <button id="menuButton" onclick="showMobileMenu()"><img src="/assets/icons/Menu.svg" alt="Menu Button"></button>
-                <button id="menuCloseButton" onclick="hideMobileMenu()"><img src="/assets/icons/Close.svg" alt="Close Menu Button"></button>
-            </div>
-
-            <div id="headerLinksMobileMenu">
-                <a href="/">Home</a>
-                <a href="/projects">Projects</a>
-                <a href="/shop">Shop</a>
-                <a href="/about">About</a>
-            </div>
         </header>
 
         <main>
-            <div id="pageTitle">
-                <span id="pageTitleText">Jacob Waters</span>
-                <span id="pageTitleSubheading">Programming and 3D printing enthusiast sharing open-source tutorials and projects.</span>
-                <div id="pageTitleButtons">
-                    <button id="visitShopButton" onclick="location.href='/shop'">Visit My Shop</button>
-                    <button id="viewProjectsButton" onclick="location.href='/projects'">View My Projects</button>
-                </div>
-            </div>
+            <form id="signUpForm" onsubmit="signUp(event)">
+                <span id="signUpFormTitle">Sign Up</span>
 
-            <div id="learnMore">
-                <span id="learnMoreText">Welcome to my website! I am a dedicated programmer with expertise in HTML, CSS, JavaScript, Python, C++, and C#. In addition to my programming skills, I am an enthusiastic 3D printing advocate, focusing on innovative projects and sharing open-source tutorials.</span>
-                <button id="learnMoreButton" onclick="location.href='/about'">Learn More About Me</button>
+                <input type="text" id="signUpName" placeholder="Name" required>
+
+                <input type="email" id="signUpEmail" placeholder="Email" required>
+                
+                <div id="password">
+                    <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).*" title="Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, and one number." minlength="6" id="signUpPassword" placeholder="Password" required>
+                    <button id="passwordEye" type="button" onclick="ChangePasswordVisibility()"><img id="passwordEyeImg" src="/assets/icons/Visibility Off.svg"></button>
+                </div>
+            
+                <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).*" title="Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, and one number." id="signUpPasswordConfirm" minlength="6" placeholder="Confirm Password" required>
+
+                <span id="output"></span>
+                
+                <button id="signUpButton" type="submit">Sign Up</button>
+            </form>
+
+            <div style="display: none;" id="emailConfirm">
+                <span id="emailConfirmTitle">Verify you email address</span>
+
+                <span id="emailConfirmSubtitle">We have sent a verification link to <b>jpwaters09@gmail.com</b></span>
+
+                <button id="emailConfirmReturnBtn" onclick="location.href='/'">Return Home</button>
             </div>
         </main>
 
@@ -96,5 +88,4 @@
             </div>
         </footer>
     </body>
-    
 </html>
