@@ -38,19 +38,10 @@ async function signUp(event) {
 
     output.textContent = "";
 
-    const {data, error} = await supabase.auth.signUp({email: signUpEmail.value, password: signUpPassword.value});
+    const {error} = await supabase.auth.signUp({email: signUpEmail.value, password: signUpPassword.value});
 
     if (error) {
-        output.textContent = error;
-        event.preventDefault();
-        alert(error);
-        return;
-    }
-
-    const user = data.user;
-
-    if (!user) {
-        output.textContent = "Check your email to confirm your account.";
+        output.textContent = error.message;
         event.preventDefault();
         return;
     }
