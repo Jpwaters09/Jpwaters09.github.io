@@ -44,7 +44,7 @@ async function signUp() {
     signUpPasswordConfirm.disabled = true;
     signUpButton.disabled = true;
 
-    const {data, error} = await supabase.auth.signUp({email: signUpEmail.value, password: signUpPassword.value});
+    const {data, error} = await supabase.auth.signUp({email: signUpEmail.value, password: signUpPassword.value, display_name: signUpName.value});
 
     if (error) {
         output.textContent = error.message;
@@ -57,18 +57,7 @@ async function signUp() {
         return;
     }
 
-    const user = data.user;
-
-    if (user){
-        await supabase
-            .from("accounts")
-            .upsert({
-                id: user.id,
-                profile: {name: signUpName.value}
-            })
-
-        signUpForm.style.display = "none";
-        emailConfirm.style.display = "";
-        emailConfirmSubtitle.innerHTML = `We have sent a verification link to <b>${signUpEmail.value}</b>`;
-    }
+    signUpForm.style.display = "none";
+    emailConfirm.style.display = "";
+    emailConfirmSubtitle.innerHTML = `We have sent a verification link to <b>${signUpEmail.value}</b>`;
 }
