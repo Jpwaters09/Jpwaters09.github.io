@@ -38,21 +38,21 @@ async function signUp() {
 
     output.textContent = "";
 
-    signUpName.style.display = "none";
-    signUpEmail.style.display = "none";
-    signUpPassword.style.display = "none";
-    signUpPasswordConfirm.style.display = "none";
-    signUpButton.style.display = "none";
+    signUpName.disabled = true;
+    signUpEmail.disabled = true;
+    signUpPassword.disabled = true;
+    signUpPasswordConfirm.disabled = true;
+    signUpButton.disabled = true;
 
     const {data, error} = await supabase.auth.signUp({email: signUpEmail.value, password: signUpPassword.value});
 
     if (error) {
         output.textContent = error.message;
-        signUpName.style.display = "";
-        signUpEmail.style.display = "";
-        signUpPassword.style.display = "";
-        signUpPasswordConfirm.style.display = "";
-        signUpButton.style.display = "";
+        signUpName.disabled = false;
+        signUpEmail.disabled = false;
+        signUpPassword.disabled = false;
+        signUpPasswordConfirm.disabled = false;
+        signUpButton.disabled = false;
         
         return;
     }
