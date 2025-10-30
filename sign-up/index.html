@@ -37,7 +37,7 @@
         </header>
 
         <main>
-            <form id="signUpForm" onsubmit="signUp(event)">
+            <div id="signUpForm">
                 <span id="signUpFormTitle">Sign Up</span>
 
                 <input type="text" id="signUpName" placeholder="Name" required>
@@ -53,8 +53,8 @@
 
                 <span id="output"></span>
                 
-                <button id="signUpButton" type="submit">Sign Up</button>
-            </form>
+                <button id="signUpButton" type="submit" onclick="signUp()">Sign Up</button>
+            </div>
 
             <div style="display: none;" id="emailConfirm">
                 <span id="emailConfirmTitle">Verify you email address</span>

@@ -20,7 +20,7 @@ function ChangePasswordVisibility() {
     }
 }
 
-async function signUp(event) {
+async function signUp() {
     let signUpForm = document.getElementById("signUpForm");
     let signUpName = document.getElementById("signUpName");
     let signUpEmail = document.getElementById("signUpEmail")
@@ -32,18 +32,23 @@ async function signUp(event) {
 
     if (signUpPassword.value != signUpPasswordConfirm.value) {
         output.textContent = "Passwords do not match.";
-        event.preventDefault();
         return;
     }
 
     output.textContent = "";
 
-    const {error} = await supabase.auth.signUp({email: signUpEmail.value, password: signUpPassword.value});
+    const {data, error} = await supabase.auth.signUp({email: signUpEmail.value, password: signUpPassword.value});
 
     if (error) {
         output.textContent = error.message;
         alert(error.message)
-        event.preventDefault();
+        return;
+    }
+
+    const user = data.user;
+
+    if (!user) {
+        output.textContent = "Check your email to confirm your account.";
         return;
     }
 
@@ -54,7 +59,4 @@ async function signUp(event) {
     signUpForm.style.display = "none";
     emailConfirm.style.display = "";
     emailConfirmSubtitle.innerHTML = `We have sent a verification link to <b>${signUpEmail.value}</b>`;
-
-    event.preventDefault();
-    return;
 }
