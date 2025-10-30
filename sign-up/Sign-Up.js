@@ -59,12 +59,16 @@ async function signUp() {
 
     const user = data.user;
 
-    await supabase
-        .from("accounts")
-        .update({profile: {name: signUpName.value}})
-        .eq("id", user.id);
+    if (user){
+        await supabase
+            .from("accounts")
+            .upsert({
+                id: user.id,
+                profile: {name: signUpName.value}
+            })
 
-    signUpForm.style.display = "none";
-    emailConfirm.style.display = "";
-    emailConfirmSubtitle.innerHTML = `We have sent a verification link to <b>${signUpEmail.value}</b>`;
+        signUpForm.style.display = "none";
+        emailConfirm.style.display = "";
+        emailConfirmSubtitle.innerHTML = `We have sent a verification link to <b>${signUpEmail.value}</b>`;
+    }
 }
