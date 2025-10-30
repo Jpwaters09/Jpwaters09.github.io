@@ -53,4 +53,7 @@ async function signUp(event) {
     signUpForm.style.display = "none";
     emailConfirm.style.display = "";
     emailConfirmSubtitle.innerHTML = `We have sent a verification link to <b>${signUpEmail.value}</b>`;
+
+    event.preventDefault();
+    return;
 }
