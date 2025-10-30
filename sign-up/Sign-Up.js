@@ -44,7 +44,13 @@ async function signUp() {
     signUpPasswordConfirm.disabled = true;
     signUpButton.disabled = true;
 
-    const {data, error} = await supabase.auth.signUp({email: signUpEmail.value, password: signUpPassword.value, display_name: signUpName.value});
+    const {data, error} = await supabase.auth.signUp({
+        email: signUpEmail.value,
+        password: signUpPassword.value,
+        options: {
+            data: {display_name: signUpName.value}
+        }
+    });
 
     if (error) {
         output.textContent = error.message;
