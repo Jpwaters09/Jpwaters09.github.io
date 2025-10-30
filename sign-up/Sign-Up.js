@@ -42,6 +42,7 @@ async function signUp(event) {
 
     if (error) {
         output.textContent = error.message;
+        alert(error.message)
         event.preventDefault();
         return;
     }
