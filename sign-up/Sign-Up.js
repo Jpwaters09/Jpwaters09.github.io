@@ -1,6 +1,6 @@
 const SUPABASE_URL = "https://yuppojdiwoxipbxprhdg.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl1cHBvamRpd294aXBieHByaGRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3NDc2NjgsImV4cCI6MjA3NzMyMzY2OH0.WZOVWaNexQMPK1ZFfMabM7xgWMaB-s0lKJ7GQjkFEK8";
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const Supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 function ChangePasswordVisibility() {
     let signUpPassword = document.getElementById("signUpPassword");
@@ -44,7 +44,7 @@ async function signUp() {
     signUpPasswordConfirm.disabled = true;
     signUpButton.disabled = true;
 
-    const {data, error} = await supabase.auth.signUp({
+    const {data, error} = await Supabase.auth.signUp({
         email: signUpEmail.value,
         password: signUpPassword.value,
         options: {
